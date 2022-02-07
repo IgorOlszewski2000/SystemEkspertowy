@@ -1,0 +1,72 @@
+import sys
+import os
+from PyQt5.QtWidgets import *
+from PyQt5 import *
+
+def przyciskRobic1():
+    print("teses1")
+def przyciskRobic2():
+    print("teses2")
+def przyciskRobic3():
+    print("teses3")
+def przyciskRobic4():
+    print("teses4")
+def przyciskRobic5():
+    label1.setText("<b> CO TO - KOT GIGANT JESY MAŁY</b>")
+    
+def window(): #funkcja główna
+    app=QApplication(sys.argv) #aplikacja
+    widget=QWidget() #kontrolki
+
+    #BPrzycisk = QPushButton(widget) # przycisk
+    #BPrzycisk.setEnabled(True)
+    #BPrzycisk.setText("TEST 1")
+    #BPrzycisk.move(120,0)
+    #BPrzycisk.clicked.connect(przyciskRobic1)
+
+    #BPrzycisk = QPushButton(widget) # przycisk
+    #BPrzycisk.setEnabled(True)
+    #BPrzycisk.setText("TEST 2")
+    #BPrzycisk.move(120,30)
+    #BPrzycisk.clicked.connect(przyciskRobic2)
+    
+    #BPrzycisk = QPushButton(widget) # przycisk
+    #BPrzycisk.setEnabled(True)
+    #BPrzycisk.setText("TEST 3")
+    #BPrzycisk.move(120,60)
+    #BPrzycisk.clicked.connect(przyciskRobic3)
+    
+    #BPrzycisk = QPushButton(widget) # przycisk
+    #BPrzycisk.setEnabled(True)
+    #BPrzycisk.setText("TEST 4")
+    #BPrzycisk.move(120,90)
+    #BPrzycisk.clicked.connect(przyciskRobic4)
+    
+    BPrzycisk = QPushButton(widget) # przycisk
+    BPrzycisk.setEnabled(True)
+    BPrzycisk.setText("TEST 5")
+    BPrzycisk.move(120,300)
+    BPrzycisk.clicked.connect(przyciskRobic5)
+
+    global label1
+    label1=QLabel(widget)
+    global label2
+    label2=QLabel(widget)
+    global label3
+    label3=QLabel(widget)
+    
+    label1.setText("<b> CO TO - KOT GIGANT JESY DUŻY</b>")
+    label1.move(120,20)
+    label2.setText("<b>METAFORA - PONIEWAŻ WYBRAŁEŚ KOTA CO LUBI DUŻO JEŚĆ</b>")
+    label2.move(120,50)
+    label3.setText("<img src='kot.jpg' width='200' height='200'>")
+    label3.move(120,70)
+    
+    
+    
+    widget.setGeometry(50,50,500,500)
+    widget.show()
+    sys.exit(app.exec_())
+
+if __name__=="__main__": 
+    window() #funkcja główna
